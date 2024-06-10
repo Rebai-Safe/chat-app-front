@@ -1,0 +1,37 @@
+<div *ngIf="!connected" id="username-page">
+    <div class="username-page-container">
+        <h1 class="title">Type your pseudo</h1>
+
+        <form name="usernameForm">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Username" autocomplete="off" class="form-control" [(ngModel)]="username" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="accent username-submit" (click)="connect()">Start Chatting</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+<div [hidden]="!connected" id="chat-page">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chat</h2>
+        </div>
+
+
+        <ul #MessageArea name="MessageArea">
+
+        </ul>
+        <form id="messageForm" name="messageForm">
+            <div class="form-group">
+                <div class="input-group clearfix">
+                    <input type="text" name="message" placeholder="Type a message..." autocomplete="off" class="form-control" [(ngModel)]="messageContent" />
+                    <button type="submit" class="primary" (click)="sendMessage()">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

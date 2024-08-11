@@ -1,0 +1,21 @@
+<div id="chat-page">
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>Chat</h2>
+    </div>
+
+
+    <ul #MessageArea name="MessageArea">
+
+    </ul>
+    <form id="messageForm" name="messageForm">
+      <div class="form-group">
+        <div class="input-group clearfix">
+          <input type="text" name="message" placeholder="Type a message..." autocomplete="off" class="form-control"
+                 [(ngModel)]="messageContent"/>
+          <button type="submit" class="primary" (click)="sendMessage()">Send</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

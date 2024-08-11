@@ -1,0 +1,14 @@
+<div id="username-page">
+  <div class="username-page-container">
+    <h1 class="title">Type your pseudo</h1>
+    <form name="usernameForm">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Username" autocomplete="off" class="form-control" [(ngModel)]="username" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="accent username-submit" (click)="connect()">Start Chatting</button>
+      </div>
+    </form>
+  </div>
+</div>
+
